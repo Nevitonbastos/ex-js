@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTAÇÃO</title>
+</head>
+<style>
+    body{
+        background-color: rgba(51, 114, 197, 0.884);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    <h1>Sistema de Votação</h1>
+    <label for="">Informe sua idade:</label>
+    <input type="number" name="txtnvel" id="txtnvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div class="container">Bola</div>
+    
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('input#txtnvel')
+            var res = document.querySelector('div#res')
+            var idade = (txtnvel.value)
+            if ( idade < 16 ){
+                res.innerHTML = ('<p>Você <strong> não </strong> pode votar!</p>')
+            }else {
+                res.innerHTML = '<p>Você pode votar</p>'
+            }
+        }
+    </script>
+</body>
+</html>
